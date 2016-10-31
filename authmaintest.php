@@ -46,7 +46,7 @@ session_start();
 			//if they are in the database, register the user id
 			$_SESSION['valid_user']	=	$userid;
 		}
-		$db_conn->close();
+
 	}
 ?>
 <!DOCTYPE html>
