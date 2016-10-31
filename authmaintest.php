@@ -13,7 +13,12 @@ session_start();
 		$userid			=	$_POST['userid'];
 		$password		=	$_POST['password'];
 		
-		$db_conn		=	new mysqli($DBhost, $DBuser, $DBpass, $DBname);
+		$mysql		=	mysqli_connect($DBhost, $DBuser, $DBpass, $DBname);
+		if(!$mysql)
+		{
+			echo 'Cannot connect to database.';
+			exit;
+		}
 		
 		if(mysqli_connect_errno())
 		{
