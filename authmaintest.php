@@ -21,12 +21,22 @@ session_start();
 			exit();
 		}
 		
-		$query			=	'select * from authorized_users'
-							."where name='$userid' "
-							." and password=sha1('$password')";
-							
-		$result			=	$db_conn->query($query);
-		if($result->num_rows >0)
+		//query the database to see if there is a record which matches
+		$query		=	"select count(*) from authorized_users where
+						 name = '$userid' and
+						 password = sha1('$password')";
+		
+		$result		=	mysqli_query($mysql, $query);
+		if(!$result)
+		{
+			echo 'Cannot run query.';
+			exit;
+		}
+		
+		$row		=	mysqli_fetch_row($result);
+		$count		=	$row[0];
+		
+		if($count > 0)
 		{
 			//if they are in the database, register the user id
 			$_SESSION['valid_user']	=	$userid;
