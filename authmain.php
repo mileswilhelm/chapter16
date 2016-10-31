@@ -74,20 +74,18 @@ session_start();
 		}
 		
 	//provide form to log in
-?>	
-
-	<form method="post" action="authmain.php">
-		<div class="form-input__container">
-			<label for="name" class="form-input_label">Username</label>
-			<input type="text" class="form-input" id="userid" name="userid">
-		</div>
-		<div class="form-input__container">
-			<label for="name" class="form-input_label">Password</label>
-			<input type="password" class="form-input" id="password" name="password">
-		</div>	
-		<button class="btn btn-block" type="submit">Log In</button>
-
-<?}
+	echo '<form method="post" action="authmain.php">';
+	echo '<div class="form-input__container">';
+	echo '<label for="name" class="form-input_label">Username</label>';
+	echo '<input type="text" class="form-input" id="userid" name="userid">';
+	echo '</div>';
+	echo '<div class="form-input__container">';
+	echo '<label for="name" class="form-input_label">Password</label>';
+	echo '<input type="password" class="form-input" id="password" name="password">';
+	echo '</div>';	
+	echo '<button class="btn btn-block" type="submit">Log In</button>';
+	
+	}
 ?>
 <a href="members_only.php" class="btn">Members Section</a>
 </div>
