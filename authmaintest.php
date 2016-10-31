@@ -75,7 +75,7 @@ session_start();
 		}
 		
 	//provide form to log in
-	echo '<form method="post" action="authmain.php">';
+	echo '<form method="post" action="authmaintest.php">';
 	echo '<div class="form-input__container">';
 	echo '<label for="userid" class="form-input_label">Username</label>';
 	echo '<input type="text" class="form-input" id="userid" name="userid">';
