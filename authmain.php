@@ -58,7 +58,7 @@ session_start();
 	if(!isset($_SESSION['valid_user']))
 	{
 		echo '<p>You are logged in as: '.$_SESSION['valid_user'].'</p>';
-		echo '<a href="logout.php" class="btn">Log out</a>';
+		echo '<div><a href="logout.php" class="btn">Log out</a></div>';
 	}
 	else
 	{
