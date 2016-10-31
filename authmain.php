@@ -49,6 +49,7 @@ session_start();
 <link rel="stylesheet" href="../css/_position-utilities.css">
 <link rel="stylesheet" href="../css/_spacing-utilities.css">
 <link rel="stylesheet" href="../css/_buttons.css">
+<link rel="stylesheet" href="../css/_inputs.css">
 
 </head>
 <body>
